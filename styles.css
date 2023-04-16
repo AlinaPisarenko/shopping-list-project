@@ -64,7 +64,7 @@ button:hover {
     transition: all 0.2s ease-in-out;
 }
 
-#shopping-list li:active {
+#shopping-list li:focus {
     background-color: #f7d9ff;
     cursor: pointer;  
 }
