@@ -1,4 +1,4 @@
-html, body {
+*, html, body {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
@@ -19,7 +19,7 @@ img {
 
 input {
     font-family: 'Rubik', sans-serif;
-    color: #432000;
+    color: #4c4c4c;
     background-color: #d3d3d37a;
     padding: 15px;
     font-size: 1.6rem;
@@ -42,3 +42,22 @@ button:hover {
     cursor: pointer;
     background-color: #933c93;
 }
+
+#shopping-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#shopping-list li {
+    flex-grow: 1;
+    list-style: none;
+    color: #4c4c4c;
+    background-color: #FFFDF8;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
