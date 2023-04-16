@@ -20,13 +20,12 @@ img {
 input {
     font-family: 'Rubik', sans-serif;
     color: #432000;
-    background-color: #DCE1EB;
+    background-color: #d3d3d37a;
     padding: 15px;
     font-size: 1.6rem;
     border: none;
     border-radius: 10px;
     text-align: center;
-
 }
 
 button {
@@ -36,4 +35,10 @@ button {
     font-size: 1.6rem;
     border: none;
     border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #933c93;
 }
