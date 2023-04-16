@@ -40,14 +40,6 @@ button {
     transition: all 0.2s ease-in-out;
 }
 
-button:hover {
-    cursor: pointer;
-    background-color: #aa55c1;
-}
-
-button:focus {
-    background-color: #aa55c1;  
-}
 
 #shopping-list {
     display: flex;
@@ -73,8 +65,28 @@ button:focus {
 }
 
 
-#shopping-list li:hover {
-    background-color: #f7d9ff;
-    cursor: pointer;  
-}
+
+
+@media (hover: hover) {
+    #shopping-list li:hover {
+        background-color: #f7d9ff;
+        cursor: pointer;  
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: #aa55c1;
+    }
+  }
+
+  @media screen and (pointer: coarse) {
+    #shopping-list li:focus {
+        background-color: #f7d9ff;
+    }
+
+    button:focus {
+        cursor: pointer;
+        background-color: #aa55c1;
+    }
+  }
 
