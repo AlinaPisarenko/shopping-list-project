@@ -64,9 +64,15 @@ button:hover {
     transition: all 0.2s ease-in-out;
 }
 
-#shopping-list li:hover {
+#shopping-list li:active {
     background-color: #f7d9ff;
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 
+
+@media screen and (min-width: 480px) {
+    #shopping-list li:hover {
+        background-color: #f7d9ff;
+        cursor: pointer;  
+    }
+  }
