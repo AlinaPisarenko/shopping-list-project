@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
-    background-color: #FFF3E2;
+    background-color: #FFFAFD;
+    color: #828282;
+    user-select: none;
 }
 
 .container {
@@ -30,7 +32,7 @@ input {
 
 button {
     color: #FDFDFD;
-    background-color: #A343A3;
+    background-color: #C964E6;
     padding: 15px;
     font-size: 1.6rem;
     border: none;
@@ -40,24 +42,31 @@ button {
 
 button:hover {
     cursor: pointer;
-    background-color: #933c93;
+    background-color: #aa55c1;
 }
 
 #shopping-list {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    font-size: 1.5rem;
 }
 
 #shopping-list li {
     flex-grow: 1;
     list-style: none;
-    color: #4c4c4c;
     background-color: #FFFDF8;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
     padding: 15px;
     font-size: 1.5rem;
     border-radius: 10px;
     text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+#shopping-list li:hover {
+    background-color: #f7d9ff;
+    cursor: pointer;
+    
 }
 

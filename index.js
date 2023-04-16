@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js'
-import { getDatabase, ref, push, onValue } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js'
+import { getDatabase, ref, push, onValue, remove } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js'
 
 
 const appSettings = {
@@ -18,12 +18,31 @@ const list = document.getElementById('shopping-list')
 
 onValue(itemsInDB, (snapshot) => {
     clearList()
-    let itemsArray = Object.values(snapshot.val())
-    itemsArray.forEach(item => appendItemToList(item))
+    let itemsArray = []
+    if (snapshot.exists()) {
+        itemsArray = Object.entries(snapshot.val())
+        itemsArray.forEach(item => {
+            appendItemToList(item)
+        })
+    } else {
+        list.textContent = "No items here... yet"
+    }
+    
 })
 
 const appendItemToList = (item) => {
-    list.innerHTML += `<li>${item}</li>`
+    let id = item[0]
+    let value = item[1]
+    const li = document.createElement('li')
+    li.textContent = value
+    list.append(li)
+
+    li.addEventListener('click', () => removeItem(id))
+}
+
+const removeItem = (id) => {
+    const itemLocation = ref(database, `items/${id}`)
+    remove(itemLocation)
 }
 
 const clearList = () => {
